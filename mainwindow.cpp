@@ -14,19 +14,19 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::on_pushButton_clicked()
+void MainWindow::on_pushButton_clicked()   //roscore button
 {
     system("gnome-terminal -- bash -c 'source /opt/ros/kinetic/setup.bash ;roscore'&");
 
 }
 
-void MainWindow::on_pushButton_2_clicked()
+void MainWindow::on_pushButton_2_clicked()  //rosnode button
 {
     system("gnome-terminal -- bash -c 'source /opt/ros/kinetic/setup.bash ;rosrun turtlesim turtlesim_node'&");
     system("gnome-terminal -- bash -c 'source /opt/ros/kinetic/setup.bash ;rosrun turtlesim turtle_teleop_key'&");
 }
 
-void MainWindow::on_pushButton_3_clicked()
+void MainWindow::on_pushButton_3_clicked()  //roslaunch button
 {
     system("gnome-terminal -x bash -c 'source ~/catkin_ws/devel/setup.bash;roslaunch send_goal_robot01 clean02.launch limited:=true'&");
 }
