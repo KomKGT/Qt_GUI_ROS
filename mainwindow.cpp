@@ -20,7 +20,7 @@ void MainWindow::on_pushButton_clicked()   //roscore button
 
 }
 
-void MainWindow::on_pushButton_2_clicked()  //rosnode button
+void MainWindow::on_pushButton_2_clicked()  //rosrun button
 {
     system("gnome-terminal -- bash -c 'source /opt/ros/kinetic/setup.bash ;rosrun turtlesim turtlesim_node'&");
     system("gnome-terminal -- bash -c 'source /opt/ros/kinetic/setup.bash ;rosrun turtlesim turtle_teleop_key'&");
